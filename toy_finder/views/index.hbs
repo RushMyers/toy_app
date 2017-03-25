@@ -1,13 +1,15 @@
 <h1>My Quarter Machine Site</h1>
 
-<!-- <p>Welcome!  This is the only site on the internet where you can find places to get quarter machine toys.  If you know a place that has awesome quarter machine toys/stickers/tattoos, you can sign up to share it!</p>
-
+<p>Welcome!  This is the only site on the internet where you can find places to get quarter machine toys.  If you know a place that has awesome quarter machines with toys/stickers/tattoos, you can sign up to share it!</p>
+<h2><a href="signup">sign up</a></h2>
+<h2><a href="/login">sign in</a></h2>
+<h2><a href="/add">contribute</a></h2>
 <ul>
     {{#each location}}
     <li>
-       <!--  <h1><a href="/authors/{{this.id}}">{{this.fullName}}</a></h1>
-        <h3>{{this.country}}</h3>
-        <p>{{this.bookTitle}}, {{this.publication_year}}</p> -->
-    </li>
+        <h1>{{this.name}}</h1>
+        <p>machines at this location: {{this.machines}}</p>
+        <h3><a href="/{{this.id}}/edit">edit</a></h3>
+        <h3>delete</h3>
     {{/each}}
-</ul> -->
+</ul>

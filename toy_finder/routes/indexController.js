@@ -18,8 +18,12 @@ router.get('/', function(req, res) {
       });
 });
 
-router.get('/login', function(req, res) {
+router.get('/signup', function(req, res) {
   res.send('sign up page here');
+});
+
+router.get('/login', function(req, res) {
+  res.send('login page here');
 });
 
 router.get('/add', function(req, res) {
