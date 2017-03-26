@@ -9,8 +9,9 @@ var session = require('express-session');
 var methodOverride = require('method-override');
 pry = require('pryjs');
 
-var index = require('./routes/indexController');
+var locations = require('./routes/locationsController');
 var users = require('./routes/usersController');
+var sessions = require('./routes/sessionsController.js');
 
 var app = express();
 
@@ -26,17 +27,20 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
+
 app.use(session({
   secret: "derpderpderpcats",
   resave: false,
   saveUninitialized: false
 }));
+
 var db = require('./db/db.js');
 mongoose.connect('mongodb://localhost/toys');
 
 
-app.use('/', index);
-app.use('/users', users);
+//app.use('/users/:userId/locations', locations);
+// app.use('/users', users);
+// app.use('/sessions', sessions)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
