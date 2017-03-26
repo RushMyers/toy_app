@@ -31,9 +31,9 @@ app.use(session({
   resave: false,
   saveUninitialized: false
 }));
-
+var db = require('./db/db.js');
 mongoose.connect('mongodb://localhost/toys');
-var db = mongoose.connection;
+
 
 app.use('/', index);
 app.use('/users', users);
