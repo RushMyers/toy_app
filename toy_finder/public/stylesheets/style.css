@@ -16,6 +16,20 @@ body {
   text-shadow: 1px 1px 1px rgba(0,0,0,1);
   text-decoration: none;
 }
+a:hover {
+  color: #f30092;
+  font-size: 20px;
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  text-transform: normal;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  white-space: pre;
+  text-shadow: 1px 1px 0 rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.67) ;
+}
 
  .welcome {
   font-family: 'Pacifico', cursive;
