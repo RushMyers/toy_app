@@ -18,7 +18,7 @@ router.get('/signup', function(req, res) {
    res.render('signUpPage');
 });
 //SIGN UP
-router.post('/', authHelpers.createSecure, function(req, res){
+router.post('/signup', authHelpers.createSecure, function signup(req, res){
 
   var user = new User({
     username: req.body.username,
@@ -26,12 +26,9 @@ router.post('/', authHelpers.createSecure, function(req, res){
   });
 
   user.save(function(err, user) {
-    if (err) console.log(err);
-    console.log(user);
-    console.log(req.session.currentUser);
-    res.redirect('/login');
+    if (err) { return console.log(err); }
+    res.redirect('/users/login');
   });
-res.redirect('/login');
 });
 
 router.get('/login', function(req, res) {
@@ -39,8 +36,8 @@ router.get('/login', function(req, res) {
   res.render('loginpage');
 });
 
-router.get('/add', function(req, res) {
-  res.send('here you can add a new location');
-});
+// router.get('/add', function(req, res) {
+//   res.send('here you can add a new location');
+// });
 
 module.exports = router;
