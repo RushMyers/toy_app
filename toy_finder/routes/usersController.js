@@ -4,23 +4,18 @@ var mongoose = require('mongoose');
 var location = require('../models/locations.js');
 var User = require('../models/users.js');
 var authHelpers = require('../helpers/auth.js');
+//GET Signup page
+//GET show user page (users/show)
+//POST sign up for website
 
-// GET home page.
+//show user
 router.get('/', function(req, res) {
-  // res.send('Sweet Home page, yo');
-  location.find({})
-      .exec(function(err, location) {
-          if(err) console.log(err);
-          console.log(location);
-          res.render('index', {
-              location: location
-          });
-      });
+  res.send('ok cool!')
 });
 //TO SIGN UP PAGE
 router.get('/signup', function(req, res) {
-  // res.send('sign up page here');
-  res.render('signUpPage');
+   // res.send('sign up page here');
+   res.render('signUpPage');
 });
 //SIGN UP
 router.post('/', authHelpers.createSecure, function(req, res){
@@ -47,3 +42,5 @@ router.get('/login', function(req, res) {
 router.get('/add', function(req, res) {
   res.send('here you can add a new location');
 });
+
+module.exports = router;

@@ -1,0 +1,24 @@
+<div class="navver">
+    <div class="yin-yang"></div>
+    <div class="nav"><a href="/users/signup">sign up</a></div>
+    <div class="nav"><a href="/users/login">sign in</a></div>
+    <div class="nav"><a href="/locations/add">contribute</a></div>
+</div>
+
+<h3 class="welcome">Welcome to</h3>
+<h1 class="banner">The Quarter Club!</h1>
+<h6 class="caption">All your quarter machine destinations in one place!</h6>
+<p class="par">Welcome!  This is the only site on the internet where you can find places to get your favorite quarter machine toys.  If you know a place that has awesome quarter machines with toys/stickers/tattoos, sign up and share it with us!</p>
+
+<ul>
+    {{#each location}}
+
+    <li>
+        <h1>{{this.name}}</h1>
+        <p>machines at this location: {{this.machines}}</p>
+        <h3><a href="/{{this.id}}/edit">edit</a></h3>
+        <h3>delete</h3>
+    </li>
+
+    {{/each}}
+</ul>

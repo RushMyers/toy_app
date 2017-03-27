@@ -4,9 +4,11 @@ router = express.Router();
 var User = require('../models/users.js');
 var authHelpers = require('../helpers/auth.js');
 
-//LOGIN
+//GET login page
+//POST create session
+//DELETE session
 router.get('/login', function(req, res) {
-  res.render('users/login.hbs');
+  res.render('loginpage.hbs');
 });
 
 router.post('/login', authHelpers.loginUser, function(req, res){
@@ -20,3 +22,4 @@ router.delete('/', function(req, res){
 });
 
 module.exports = router;
+//=======================================

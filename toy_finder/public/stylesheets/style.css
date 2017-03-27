@@ -1,8 +1,110 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+  background-color: #504ba5;
+}
+.navver {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ }
+
+ a {
+  color: #fef200;
+  font-size: 20px
 }
 
-a {
-  color: #00B7FF;
+ .welcome {
+  font-family: 'Pacifico', cursive;
+  font-size: 35px;
+  color: #00DED3;
+  margin: 0px;
+  }
+
+.banner {
+  color: #ee4a25;
+  font-size: 120px;
+  font-family: 'Chewy', cursive;
+  letter-spacing: 10px;
+  text-shadow: 7px 3px 1px rgba(0,0,0,1);
+  margin: 20px 0 20px 0;
+ }
+
+.caption {
+  font-size: 30px;
+  color:  #f30092;
+  background-size: 700px;
+  text-shadow: 3px 3px 1px rgba(0,0,0,1);
+  margin: 20px 0 20px 0;
 }
+
+.par {
+  font-size: 20px;
+  color: #06a956;
+  width: 700px;
+  margin: auto 0 auto 0;
+  text-shadow: 1px 1px 1px rgba(0,0,0,1);
+}
+.yin-yang {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 96px;
+  height: 48px;
+  position: relative;
+  border: 2px solid #1abc9c;
+  border-bottom-width: 50px;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(255,255,255,1);
+  -webkit-transform: rotateX(31.51267873219528deg) rotateY(172.46029633437777deg) rotateZ(418.25919044550096deg)   ;
+  transform: rotateX(31.51267873219528deg) rotateY(172.46029633437777deg) rotateZ(418.25919044550096deg)   ;
+}
+
+.yin-yang::before {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  border: 18px solid #1abc9c;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(255,255,255,1);
+  text-shadow: none;
+}
+
+.yin-yang::after {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  border: 18px solid rgba(255,255,255,1);
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #1abc9c;
+  text-shadow: none;
+}
+

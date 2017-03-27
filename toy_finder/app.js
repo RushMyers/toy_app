@@ -10,8 +10,9 @@ var methodOverride = require('method-override');
 pry = require('pryjs');
 
 var locations = require('./routes/locationsController');
-var users = require('./routes/usersController');
+var users = require('./routes/usersController.js');
 var sessions = require('./routes/sessionsController.js');
+var indexController = require('./routes/indexController.js');
 
 var app = express();
 
@@ -39,8 +40,9 @@ mongoose.connect('mongodb://localhost/toys');
 
 
 //app.use('/users/:userId/locations', locations);
-// app.use('/users', users);
-// app.use('/sessions', sessions)
+app.use('/users', users);
+app.use('/sessions', sessions);
+app.use('/', indexController);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

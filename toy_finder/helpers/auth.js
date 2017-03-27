@@ -10,7 +10,7 @@ function createSecure(req, res, next) {
 
 function loginUser(req, res, next) {
   var password = req.body.password;
-  User.findOne({ email: email })
+  User.findOne({ username: User.username })
   .then(function(foundUser){
     if (foundUser == null) {
       res.json({status: 401, data: "unauthorized"});
