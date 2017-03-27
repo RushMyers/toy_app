@@ -10,6 +10,7 @@ var authHelpers = require('../helpers/auth.js');
 router.get('/', function(req, res) {
   // res.send('Sweet Home page, yo');
   //console.log(location.find({}));
+  console.log("home page!!!")
   location.find({})
       .exec(function(err, location) {
           if(err) console.log(err);

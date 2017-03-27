@@ -14,7 +14,7 @@ var UserSchema = new Schema ({
 var LocationSchema = new Schema ({
   name: String,
   address: String,
-  machines: []
+  machines: String
 });
 
 UserSchema.pre('save', function(next) {

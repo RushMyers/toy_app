@@ -44,6 +44,7 @@ mongoose.connect('mongodb://localhost/toys');
 app.use('/users', users);
 app.use('/sessions', sessions);
 app.use('/', indexController);
+app.use('/locations', locations);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

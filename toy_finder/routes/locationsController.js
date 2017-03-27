@@ -12,8 +12,13 @@ var authHelpers = require('../helpers/auth.js');
 
 
 router.get('/add', function(req, res) {
-  res.send('here you can add a new location');
+  //res.send('here you can add a new location');
+    res.render('newLocation');
 });
+
+router.post('/add', function(req, res) {
+
+})
 
 router.get('/:id/edit', function(req, res) {
   res.send('here you can edit this location');
