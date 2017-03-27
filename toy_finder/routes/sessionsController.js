@@ -12,10 +12,12 @@ router.get('/login', function(req, res) {
   res.render('loginpage.hbs');
 });
 
-router.post('/login', function(req, res){
-  res.redirect('/users/' + req.params.id);
-  console.log(req.body);
+router.post('/login', authHelpers.loginUser, function(req, res){
+  console.log("hi theree pleaseeeeeeeeeee")
+  res.redirect('../');
 });
+
+// /users/' + req.params.id
 
 router.delete('/', function(req, res){
   req.session.destroy(function(){

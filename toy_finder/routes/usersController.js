@@ -17,6 +17,7 @@ router.get('/signup', function(req, res) {
    // res.send('sign up page here');
    res.render('signUpPage');
 });
+
 //SIGN UP
 router.post('/signup', authHelpers.createSecure, function signup(req, res){
 
@@ -34,6 +35,11 @@ router.post('/signup', authHelpers.createSecure, function signup(req, res){
 router.get('/login', function(req, res) {
   // res.send('login page here');
   res.render('loginpage');
+});
+
+router.post('/login', authHelpers.loginUser, function(req, res){
+  console.log("hi theree pleaseeeeeeeeeee")
+  res.redirect('../');
 });
 
 // router.get('/add', function(req, res) {

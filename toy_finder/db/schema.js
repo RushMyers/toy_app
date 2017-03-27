@@ -7,7 +7,8 @@ var UserSchema = new Schema ({
   username: String,
   password: String,
   created_at: Date,
-  updated_at: Date
+  updated_at: Date,
+  password_digest: String
 });
 
 var LocationSchema = new Schema ({
