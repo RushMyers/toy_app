@@ -12,13 +12,13 @@ body {
 
  a {
   color: #fef200;
-  font-size: 20px;
+  font-size: 35px;
   text-shadow: 1px 1px 1px rgba(0,0,0,1);
   text-decoration: none;
 }
 a:hover {
-  color: #f30092;
-  font-size: 20px;
+  color:#f30092;
+  font-size: 35px;
   display: inline-block;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -33,7 +33,7 @@ a:hover {
 
  .welcome {
   font-family: 'Pacifico', cursive;
-  font-size: 35px;
+  font-size: 70px;
   color: #00DED3;
   margin: 0px;
   text-shadow: 1px 1px 1px rgba(0,0,0,1);
@@ -45,7 +45,7 @@ a:hover {
   font-family: 'Chewy', cursive;
   letter-spacing: 10px;
   text-shadow: 7px 3px 1px rgba(0,0,0,1);
-  margin: 20px 0 20px 0;
+  margin: 0 0 20px 0;
  }
 
 .caption {
