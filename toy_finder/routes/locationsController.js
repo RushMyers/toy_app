@@ -16,9 +16,29 @@ router.get('/add', function(req, res) {
     res.render('newLocation');
 });
 
-router.post('/add', function(req, res) {
 
-})
+
+router.post('/add', function createNewLocation(req, res){
+  User.findById(req.params._id)
+    .exec(function (err, user){
+      if (err) { console.log(err); }
+
+      const newLocation = {
+        name: req.body.name,
+        address: req.body.address,
+        machines: req.body.machines
+      }
+
+      //user.projectIdeas.push(newLocation)
+
+      newLocation.save(function (err) {
+        if (err) console.log(err);
+        console.log('location created!')
+      });
+
+      res.redirect('/')
+    });
+});
 
 router.get('/:id/edit', function(req, res) {
   res.send('here you can edit this location');
