@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  padding: 13px 50px 50px 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
   background-color: #504ba5;
@@ -12,7 +12,9 @@ body {
 
  a {
   color: #fef200;
-  font-size: 20px
+  font-size: 20px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,1);
+  text-decoration: none;
 }
 
  .welcome {
@@ -20,6 +22,7 @@ body {
   font-size: 35px;
   color: #00DED3;
   margin: 0px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,1);
   }
 
 .banner {
@@ -38,12 +41,14 @@ body {
   text-shadow: 3px 3px 1px rgba(0,0,0,1);
   margin: 20px 0 20px 0;
 }
-
+.parag {
+  border-radius: 68px 20px 68px 20px;
+}
 .par {
   font-size: 20px;
   color: #06a956;
-  width: 700px;
-  margin: auto 0 auto 0;
+  width: 63%;
+  margin: 0 auto 0 auto;
   text-shadow: 1px 1px 1px rgba(0,0,0,1);
 }
 .yin-yang {
