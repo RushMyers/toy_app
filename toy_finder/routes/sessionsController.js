@@ -1,6 +1,6 @@
 
 var express = require('express');
-router = express.Router();
+var router = express.Router();
 var User = require('../models/users.js');
 var authHelpers = require('../helpers/auth.js');
 
@@ -12,8 +12,8 @@ router.get('/login', function(req, res) {
   res.render('loginpage.hbs');
 });
 
-router.post('/login', authHelpers.loginUser, function(req, res){
-  console.log("hi theree pleaseeeeeeeeeee")
+router.post('/login', function(req, res){
+  res.send("hi theree pleaseeeeeeeeeee");
   res.redirect('../');
 });
 
