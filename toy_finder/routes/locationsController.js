@@ -41,38 +41,86 @@ router.post('/add', function createNewLocation(req, res){
     });
 });
 
-router.get('/locations/:id/edit', function(req, res) {
+router.get('/:id/edit', function editLocationPage(req, res) {
   Location.findById(req.params.id)
+  .exec(function (err, location){
+    if (err) { console.log(err); }
+
+    // var thisLocation = location.id(req.params.id);
+
+    res.render('edit.hbs', {
+               location: location
+      });
+
+  });
+
+});
+
+router.put('/:id/edit', function(req, res) {
+  Location.findByIdAndUpdate(req.params.id)
     .exec(function (err, location){
       if (err) { console.log(err); }
       if (!location) {console.log('oopsyyy');}
       // console.log(user.locations);
-      // const location = locations.id(req.params.id);
+      // const thisLocation = location.id(req.params.id);
       // console.log('locations.id');
-
-      res.render('edit.hbs', {
-        location: location
-        // user: user
-      });
+      location.name = req.body.name;
+      location.address = req.body.address;
+      location.machines = req.body.machines;
+      location.save();
+      res.redirect('/')
     });
   console.log('sup');
 });
-router.delete('/:id', function deleteLocation (req, res) {
-  var location = Location.findById(req.params._id)
-    .exec(function (err, user){
+
+router.delete('/:id', function deleteLocation(req, res) {
+  Location.findByIdAndRemove(req.params.id)
+    .exec(function (err, location){
       if (err) { console.log(err); }
+      // location.remove();
 
-      location.remove();
-
-      // user.save(function (err) {
+      // location.save(function (err) {
       //   if (err) console.log(err);
-      //   console.log('Project Idea was removed')
-      // });
-
-      res.render('/', {
-
+        console.log('Project Idea was removed')
+        res.redirect('/')
       });
-    });
 });
+
+//create a DELETE "/:id" route that deletes the restaurant item
+// router.delete('/:id', function(req, res) {
+//     User.findByIdAndUpdate(req.params.userId, {
+//         $pull: {
+//             restaurant: {_id: req.params.id}
+//         }
+//     })
+//         .exec(function(err, user) {
+//             if (err) { console.log(err); }
+//         });
+//     Restaurant.findByIdAndRemove(req.params.id)
+//         .exec(function(err, restaurant) {
+//             if (err) { console.log(err); }
+//             res.redirect(`/users/${req.params.userId}`);
+//         });
+// });
+
+
+// DELETE THE MOUNT
+// router.delete("/:id", function(req, res) {
+//     User.findByIdAndUpdate(req.params.userId, {
+//         $pull: {
+//             mounts: {_id: req.params.id}
+//         }
+//     })
+//         .exec(function(err, user) {
+//             if (err) { console.log(err); }
+//         });
+//     Mount.findByIdAndRemove(req.params.id)
+//         .exec(function(err, mounts) {
+//             if (err) { console.log(err); }
+//             res.redirect(`/users/${req.params.userId}`);
+//         });
+// });
+
+
 
 module.exports = router;

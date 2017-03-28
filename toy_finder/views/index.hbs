@@ -19,8 +19,8 @@
     <li>
         <h1>{{this.name}}</h1>
         <p>machines at this location: {{this.machines}} </p>
-        <h3><a href="locations/{{this.id}}/edit">edit</a></h3>
-        <form action="/locations/{{this.id}}/locations/{{this.id}}?_method=DELETE" method="POST">
+        <h3><a href="/locations/{{this.id}}/edit">edit</a></h3>
+        <form action="/locations/{{this.id}}?_method=DELETE" method="POST">
   <input type="submit" value="Delete Location"/>
 </form>
     </li>

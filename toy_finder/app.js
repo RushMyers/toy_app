@@ -65,3 +65,38 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
+// DELETE THE MOUNT
+// router.delete("/:id", function(req, res) {
+//     User.findByIdAndUpdate(req.params.userId, {
+//         $pull: {
+//             mounts: {_id: req.params.id}
+//         }
+//     })
+//         .exec(function(err, user) {
+//             if (err) { console.log(err); }
+//         });
+//     Mount.findByIdAndRemove(req.params.id)
+//         .exec(function(err, mounts) {
+//             if (err) { console.log(err); }
+//             res.redirect(`/users/${req.params.userId}`);
+//         });
+// });
+
+//create a DELETE "/:id" route that deletes the restaurant item
+// router.delete('/:id', function(req, res) {
+//     User.findByIdAndUpdate(req.params.userId, {
+//         $pull: {
+//             restaurant: {_id: req.params.id}
+//         }
+//     })
+//         .exec(function(err, user) {
+//             if (err) { console.log(err); }
+//         });
+//     Restaurant.findByIdAndRemove(req.params.id)
+//         .exec(function(err, restaurant) {
+//             if (err) { console.log(err); }
+//             res.redirect(`/users/${req.params.userId}`);
+//         });
+// });

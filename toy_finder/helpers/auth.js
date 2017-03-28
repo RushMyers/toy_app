@@ -5,7 +5,7 @@ function createSecure(req, res, next) {
   var password = req.body.password;
   res.hashedPassword = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
   next();
-}
+};
 
 function loginUser(req, res, next) {
   var password = req.body.password;
@@ -18,13 +18,13 @@ function loginUser(req, res, next) {
 
       else if (foundUser.password === password) {
       req.session.currentUser = foundUser;
-    }
+    };
     next();
   })
   .catch(function(err){
     res.json({status: 500, data: err});
   });
-}
+};
 
 // check if the CurrentUser's id matches the id in params
 // function authorized(req, res, next) {
