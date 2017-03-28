@@ -57,5 +57,22 @@ router.get('/locations/:id/edit', function(req, res) {
     });
   console.log('sup');
 });
+router.delete('/:id', function deleteLocation (req, res) {
+  var location = Location.findById(req.params._id)
+    .exec(function (err, user){
+      if (err) { console.log(err); }
+
+      location.remove();
+
+      // user.save(function (err) {
+      //   if (err) console.log(err);
+      //   console.log('Project Idea was removed')
+      // });
+
+      res.render('/', {
+
+      });
+    });
+});
 
 module.exports = router;
