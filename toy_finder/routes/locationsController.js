@@ -1,14 +1,14 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var location = require('../models/locations.js');
+var Location = require('../models/locations.js');
 var User = require('../models/users.js');
 var authHelpers = require('../helpers/auth.js');
 
 //POST new Location
 //EDIT Location
 //DELETE Location
-
+//SHOW location
 
 
 router.get('/add', function(req, res) {
@@ -41,7 +41,21 @@ router.post('/add', function createNewLocation(req, res){
     });
 });
 
-router.get('/:id/edit', function(req, res) {
-  res.send('here you can edit this location');
- });
+router.get('/locations/:id/edit', function(req, res) {
+  Location.findById(req.params.id)
+    .exec(function (err, location){
+      if (err) { console.log(err); }
+      if (!location) {console.log('oopsyyy');}
+      // console.log(user.locations);
+      // const location = locations.id(req.params.id);
+      // console.log('locations.id');
+
+      res.render('edit.hbs', {
+        location: location
+        // user: user
+      });
+    });
+  console.log('sup');
+});
+
 module.exports = router;
