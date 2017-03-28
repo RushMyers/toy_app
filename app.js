@@ -9,6 +9,7 @@ var session = require('express-session');
 var MongoStore = require("connect-mongo")(session);
 var methodOverride = require('method-override');
 pry = require('pryjs');
+require('dotenv').config();
 
 var locations = require('./routes/locationsController');
 var users = require('./routes/usersController.js');
@@ -37,7 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
 var db = require('./db/db.js');
-mongoose.connect('mongodb://localhost/toys');
+mongoose.connect(process.env.MONGODB_URI);
 
 
 //app.use('/users/:userId/locations', locations);
