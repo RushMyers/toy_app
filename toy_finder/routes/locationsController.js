@@ -23,7 +23,7 @@ router.post('/add', function createNewLocation(req, res){
     .exec(function (err, user){
       if (err) { console.log(err); }
 
-      var newLocation = new location({
+      var newLocation = new Location({
         name: req.body.name,
         address: req.body.address,
         machines: req.body.machines

@@ -18,7 +18,9 @@ function loginUser(req, res, next) {
 
       else if (foundUser.password === password) {
       req.session.currentUser = foundUser;
-    };
+    } else if(foundUser.password !== password) {
+      res.json({status: 401, data: "unauthorized"});
+    }
     next();
   })
   .catch(function(err){
