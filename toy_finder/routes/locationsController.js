@@ -41,7 +41,7 @@ router.post('/add', function createNewLocation(req, res){
     });
 });
 
-router.get('/:id/edit', function editLocationPage(req, res) {
+router.get('/:id/edit', authHelpers.authorized, function editLocationPage(req, res) {
   Location.findById(req.params.id)
   .exec(function (err, location){
     if (err) { console.log(err); }

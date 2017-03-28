@@ -14,7 +14,7 @@ router.get('/', function(req, res) {
   location.find({})
       .exec(function(err, location) {
           if(err) console.log(err);
-          console.log(location);
+          // console.log(location);
           res.render('index', {
               location: location
           });
