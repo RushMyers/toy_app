@@ -27,6 +27,7 @@ Trello board:
 [trello link](https://trello.com/b/PjMTa9L4/wdi-project-one)
 
 Future Development:
-add pictures for each location
-add a search bar so that user can search by toy
-add styling to forms
+-add pictures for each location
+-add a search bar so that user can search by toy
+-add styling to forms
+-put edit and delete buttons on show page
