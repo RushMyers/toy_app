@@ -1,6 +1,7 @@
 body {
   padding: 13px 50px 50px 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+  font-family: 'Merriweather Sans', sans-serif;
   text-align: center;
   background-color: #504ba5;
 }
@@ -28,7 +29,7 @@ body {
   -o-text-overflow: clip;
   text-overflow: clip;
   white-space: pre;
-  text-shadow: 1px 1px 0 rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.67) ;
+  text-shadow: 1px 1px 0 rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.67);
 }
 
  .welcome {
@@ -128,9 +129,13 @@ body {
 }
 .location {
   list-style-type: none;
+  display: flex;
  }
 .locationItem {
-  margin-top: 70px
+  border: 2px solid #06a956;
+  width: 300px;
+  margin: 135px auto 0px auto;
+  border-radius: 12px;
   }
 .info {
   display: flex;
@@ -141,9 +146,14 @@ body {
   font-size: 35px;
   color: #ee4a25;
   text-shadow: 3px 1px 1px rgba(0,0,0,1);
-  letter-spacing: 8px;
+  letter-spacing: 4px;
   text-decoration: underline;
  }
+ .sp {
+  color: #f30092;
+  text-shadow: 3px 1px 1px rgba(0,0,0,1);
+  font-style: italic;
+  }
 .machines {
   font-size: 20px;
   color: #fef200;
@@ -154,7 +164,13 @@ body {
   color: #f30092;
   text-shadow: 2px 1px 1px rgba(0,0,0,1);
  }
-
-
+ .information {
+  font-size: 35px;
+  color: #fef200;
+ }
+.back {
+  color: #FF00C3;
+  text-shadow: 2px 1px 1px rgba(0,0,0,1);
+}
 
 

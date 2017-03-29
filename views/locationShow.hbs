@@ -1,7 +1,7 @@
-<h1>Name: {{location.name}}</h1>
-<h1>Address: {{location.address}}</h1>
-<h1>Quarter machines at this location: {{location.machines}}</h1>
-<h1><a href="/">Back to Main Page</a></h1>
+<h1 class="banner">{{location.name}}</h1>
+<h1 class="caption"><span class="information">Address:</span><br>{{location.address}}</h1>
+<h1 class="caption"><span class="information">Quarter machines at this location:</span><br>{{location.machines}}</h1>
+<h1><a href="/" class="back">Back to Main Page</a></h1>
 <!-- <a href="/users/{{user.id}}/project-ideas/{{projectIdea.id}}/edit">Edit Project Idea</a>
 <form action="/users/{{user.id}}/project-ideas/{{projectIdea.id}}?_method=DELETE" method="POST">
   <input type="submit" value="Delete Project Idea"/>
