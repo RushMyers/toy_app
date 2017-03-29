@@ -21,7 +21,7 @@ router.post('/login', function(req, res){
 
 router.delete('/', function(req, res){
   req.session.destroy(function(){
-    res.redirect('/users');
+    res.redirect('/');
   });
 });
 

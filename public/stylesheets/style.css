@@ -130,7 +130,6 @@ body {
   list-style-type: none;
  }
 .locationItem {
-  border: 1px solid black;
   margin-top: 70px
   }
 .info {
@@ -152,7 +151,8 @@ body {
  }
 .edit {
   font-size: 20px;
-  color: ;
+  color: #f30092;
+  text-shadow: 2px 1px 1px rgba(0,0,0,1);
  }
 
 

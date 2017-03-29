@@ -11,10 +11,10 @@ router.get('/', function(req, res) {
   // res.send('Sweet Home page, yo');
   //console.log(location.find({}));
   console.log("home page!!!")
+  console.log(req.session.currentUser);
   location.find({})
       .exec(function(err, location) {
           if(err) console.log(err);
-          // console.log(location);
           res.render('index', {
               location: location
           });

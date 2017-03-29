@@ -33,10 +33,7 @@ function loginUser(req, res, next) {
 
 // check if the CurrentUser's id matches the id in params
 function authorized(req, res, next) {
-  if (!req.session.currentUser || req.params.id !== req.session.currentUser._id) {
-    console.log(req.session.currentUser);
-    console.log(req.params.id);
-    console.log(req.session.currentUser._id);
+  if (!req.session.currentUser) {
      res.json({status: 404, data: "uh oh. you aren't authorized. haha. please sign in."});
     }
   next();
