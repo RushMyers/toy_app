@@ -31,16 +31,22 @@ function loginUser(req, res, next) {
 }
 
 
-//check if the CurrentUser's id matches the id in params
+// check if the CurrentUser's id matches the id in params
 function authorized(req, res, next) {
-  var theUser = req.params.id;
-  console.log(currentUser);
   if (!req.session.currentUser || req.params.id !== req.session.currentUser._id) {
-    return res.json({status: 404, data: "uh oh. you aren't authorized. haha. please sign in."});
+    console.log(req.session.currentUser);
+    console.log(req.params.id);
+    console.log(req.session.currentUser._id);
+     res.json({status: 404, data: "uh oh. you aren't authorized. haha. please sign in."});
     }
   next();
 };
-
+// function authorized (req, res, next) {
+//   if(!req.session.currentUser || req.params.id !== req.session.currentUser._id) {
+//     res.json({status: 404, data: 'oops you\'re not authorized, teehee'});
+//   }
+//   next();
+// }
 
 module.exports = {
   createSecure: createSecure,

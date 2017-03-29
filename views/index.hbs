@@ -1,8 +1,8 @@
 <div class="navver">
     <div class="yin-yang"></div>
-    <div class="nav"><a href="/users/signup">sign up</a></div>
-    <div class="nav"><a href="/users/login">sign in</a></div>
-    <div class="nav"><a href="/locations/add">contribute</a></div>
+    <div class="nav"><a href="/users/signup" class="navv">sign up</a></div>
+    <div class="nav"><a href="/users/login" class="navv">sign in</a></div>
+    <div class="nav"><a href="/locations/add" class="navv">contribute</a></div>
 </div>
 
 <h3 class="welcome">Welcome to</h3>
@@ -13,18 +13,20 @@
     <p class="par">Welcome!  This is the only site on the internet where you can find places to get your favorite quarter machine toys.  If you know a place that has awesome quarter machines with toys/stickers/tattoos, sign up and share it with us!</p>
 </div>
 
-<ul>
+<ul class="location">
     {{#each location}}
-
-    <li>
-        <h1>{{this.name}}</h1>
-        <p>machines at this location: {{this.machines}} </p>
-        <p><a href="/locations/{{this.id}}">more info</a></p>
-        <h3><a href="/locations/{{this.id}}/edit">edit</a></h3>
-        <form action="/locations/{{this.id}}?_method=DELETE" method="POST">
-  <input type="submit" value="Delete Location"/>
-</form>
-    </li>
-
+    <div class="locationItem">
+            <li>
+                    <h1 class="name">{{this.name}}</h1>
+                    <p class="machines">machines at this location: {{this.machines}} </p>
+                    <div class="info">
+                            <p><a href="/locations/{{this.id}}">more info</a></p>
+                            <h3><a href="/locations/{{this.id}}/edit">edit</a></h3>
+                            <form action="/locations/{{this.id}}?_method=DELETE" method="POST">
+                            <input type="submit" value="Delete Location"/>
+                            </form>
+                    </div>
+            </li>
+    </div>
     {{/each}}
 </ul>

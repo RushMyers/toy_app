@@ -10,7 +10,7 @@ body {
   align-items: center;
  }
 
- a {
+ .navv {
   color: #fef200;
   font-size: 35px;
   text-shadow: 1px 1px 1px rgba(0,0,0,1);
@@ -126,4 +126,29 @@ a:hover {
   background: #1abc9c;
   text-shadow: none;
 }
+.location {
+  list-style-type: none;
+ }
+.locationItem {
+  border: 1px solid black;
+  margin-top: 30px
+  }
+.info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ }
+.name {
+  font-size: 35px;
+  color: #ee4a25;
+  text-shadow: 3px 1px 1px rgba(0,0,0,1);
+  letter-spacing: 8px;
+  text-decoration: underline;
+
+ }
+
+
+
+
+
 
