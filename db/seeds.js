@@ -1,5 +1,7 @@
+require('dotenv').config(); // behind the scenes, is load in .env and assign it process.env as an object
+
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/toys');
+mongoose.connect(process.env.MONGODB_URI);
 
 var Location = require("../models/locations");
 

@@ -17,16 +17,10 @@ router.get('/add', function(req, res) {
 });
 
 router.get('/:id', function showLocation(req, res) {
-    Location.findById(req.params.id)
-    .exec(function (err, user){
-      if (err) { console.log(err); }
-      const thisLocation = user.projectIdeas.id(req.params.id);
-      res.render('project_ideas/show', {
-        projectIdea: projectIdea,
-        user: user
+      res.render('locationShow', {
+        location: Location
       });
     });
-});
 
 
 router.post('/add', function createNewLocation(req, res){
