@@ -16,7 +16,7 @@ body {
   text-shadow: 1px 1px 1px rgba(0,0,0,1);
   text-decoration: none;
 }
-a:hover {
+.navv:hover {
   color:#f30092;
   font-size: 35px;
   display: inline-block;
@@ -131,7 +131,7 @@ a:hover {
  }
 .locationItem {
   border: 1px solid black;
-  margin-top: 30px
+  margin-top: 70px
   }
 .info {
   display: flex;
@@ -144,10 +144,16 @@ a:hover {
   text-shadow: 3px 1px 1px rgba(0,0,0,1);
   letter-spacing: 8px;
   text-decoration: underline;
-
  }
-
-
+.machines {
+  font-size: 20px;
+  color: #fef200;
+  text-shadow: 1px 1px 1px rgba(0,0,0,1);
+ }
+.edit {
+  font-size: 20px;
+  color: ;
+ }
 
 
 

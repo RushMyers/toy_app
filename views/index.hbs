@@ -17,13 +17,13 @@
     {{#each location}}
     <div class="locationItem">
             <li>
-                    <h1 class="name">{{this.name}}</h1>
-                    <p class="machines">machines at this location: {{this.machines}} </p>
+                    <h1><a href="/locations/{{this.id}}" class="name">{{this.name}} </a> </h1>
+                            <p class="machines">machines at this location: {{this.machines}} </p>
                     <div class="info">
-                            <p><a href="/locations/{{this.id}}">more info</a></p>
-                            <h3><a href="/locations/{{this.id}}/edit">edit</a></h3>
+                            <!-- <p><a href="/locations/{{this.id}}">more info</a></p> -->
+                            <h3 class="edit"><a href="/locations/{{this.id}}/edit">edit</a></h3>
                             <form action="/locations/{{this.id}}?_method=DELETE" method="POST">
-                            <input type="submit" value="Delete Location"/>
+                            <input type="submit" value="Delete This Location"/>
                             </form>
                     </div>
             </li>
